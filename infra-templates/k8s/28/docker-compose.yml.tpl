@@ -16,7 +16,7 @@ kubelet:
         - --cloud-provider=${CLOUD_PROVIDER}
         - --healthz-bind-address=0.0.0.0
         - --cluster-dns=10.43.0.10
-        - --cluster-domain=cluster.local
+        - --cluster-domain=internal.k8s
         - --network-plugin=cni
         - --cni-conf-dir=/etc/cni/managed.d
         {{- if and (ne .Values.REGISTRY "") (ne .Values.POD_INFRA_CONTAINER_IMAGE "") }}
